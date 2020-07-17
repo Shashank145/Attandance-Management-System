@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Registration</title>
+<script type="text/javascript">
+
+function validate() 
+{
+  var fname=document.f.fname.value;
+  var lname=document.f.lname.value;
+  var email=document.f.email.value;
+  var password=document.f.password.value;
+  var cpassword=document.f.cpassword.value;
+  var r1=document.f.r1.value;
+  
+  var atpos=email.indexOf("@");
+  var dotpos=email.lastIndexOf(".");
+  
+  
+  
+  
+  
+  if(lname=="" || fname=="" || email=="" || password=="" || cpassword=="" || r1=="" )
+	   {
+	   alert("Please Fill all the Enteries ): ");
+	   return false;
+	    
+	   }
+  else  if(password!=cpassword)
+	{
+	  alert("Password Not Matched ): ");
+	       return false;
+	}
+  if(atpos<1 || (dotpos-atpos)<2)
+  {
+  alert("Please Enter Correct Email Id ):");
+  return false;
+  }
+} </script>
+
+</head>
+<body>
+    
+     <form action="studentregistration.jsp" method="post" onsubmit="return validate()" name="f">
+
+  <pre>
+     
+                First Name       : <input type="text " name="fname">
+                
+                Last Name        : <input type="text " name="lname">
+                
+                Email            : <input  type="text " name="email">
+                
+                Password         : <input  type="password" name="password">
+                
+                Confirm Password : <input type="password" name="cpassword">
+                
+                Gender           : <input type="radio" name="r1" value="male"> Male <input type="radio" name="r1" value="female."> Female
+  
+                            <input type="submit" value="Register">
+  
+  </pre>
+
+</form>
+</body>
+</html>

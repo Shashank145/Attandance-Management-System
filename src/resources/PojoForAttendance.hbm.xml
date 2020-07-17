@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+      
+      <class name="beans.PojoForAttendance" table="attendance" >
+      
+      <id name="S_No">
+       
+      <generator class="increment"></generator>
+      </id>
+     <property name="date"></property>
+      <property name="attStatus"></property>
+      <property name="Subject"></property>
+      <property name="id"></property>
+      
+      </class>
+    
+    
+    </hibernate-mapping>
